@@ -9,7 +9,7 @@ int main(void)
 	/* 97 - 122 */
 	char a = 97;
 
-	while (a < 122)
+	while (a <= 122)
 	{
 		if ((a != 'e') && (a != 'q'))
 		{
