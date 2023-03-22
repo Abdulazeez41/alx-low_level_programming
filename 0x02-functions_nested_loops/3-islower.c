@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *	_isLower - Check for lower case letters
+ *	_islower - Check for lower case letters
  *	@c : int variable
  *	Return: 0 if run successful
  */
