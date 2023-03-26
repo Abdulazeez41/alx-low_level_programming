@@ -3,7 +3,7 @@
 
 /**
  *	_abs - Computes an absolute value
- *	@int: int data input
+ *	@i: int data input
  *	Return: 0 if run successful
  */
 int _abs(int i)
