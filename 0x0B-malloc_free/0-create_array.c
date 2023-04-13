@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- *	char_array - Create an array of characters by allocating a memory
+ *	create_array - Create an array of characters by allocating a memory
  *	@size: integer input
  *	@c: character input
  *	Return: 0
@@ -14,11 +14,11 @@ char *create_array(unsigned int size, char c)
 
 	ar = malloc(size * sizeof(char));
 	if (ar == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < size; i++)
 	{
 		ar[i] = c;
 	}
-	return ar;
+	return (ar);
 }

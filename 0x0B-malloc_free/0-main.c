@@ -31,10 +31,10 @@ void simple_print_buffer(char *buffer, unsigned int size)
 }
 
 /**
- *  * main - check the code for ALX School students.
- *   *
- *    * Return: Always 0.
- *     */
+ *	main - check the code for ALX School students.
+ *
+ *	Return: Always 0.
+ */
 int main(void)
 {
 	char *buffer;
