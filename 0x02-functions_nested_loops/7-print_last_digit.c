@@ -8,6 +8,15 @@
  */
 int print_last_digit(int i)
 {
-	i = i / 10;
-	return ('0' + i);
+	int j;
+	int k;
+
+	j = i % 10;
+	if (j < 0)
+	{
+		j = -j;
+	}
+	k = '0' + j;
+	_putchar(k);
+	return (j);
 }
