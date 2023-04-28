@@ -23,7 +23,7 @@ int main(void)
 			l = l + m;
 		}
 	}
-	printf("%d ", l);
+	printf("%d", l);
 	printf("\n");
 	return (0);
 }
