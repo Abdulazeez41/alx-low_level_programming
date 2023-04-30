@@ -58,8 +58,8 @@ void print_f(va_list f)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
-	unsigned int j = 0;
+	unsigned int i;
+	unsigned int j;
 
 	print_t p[] = {
 		{"c", print_c},
@@ -72,9 +72,10 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 
 	va_start(valist, format);
-
+	i= 0;
 	while (format && format[i])
 	{
+		j = 0;
 		while (p[j].t != NULL)
 		{
 			if (*(p[j].t) == format[i])
