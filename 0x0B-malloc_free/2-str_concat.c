@@ -1,51 +1,46 @@
+#include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
- *	str_concat - Concatenate two strings by assigning a memory allocation 
- *	@s1: character input
- *	@s2: character input
- *	Return: pointer
+ * str_concat - concatenates two strings
+ * @s1: char
+ * @s2: char
+ * Return: pointer
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *join;
-	int len1;
-	int len2;
-	int i;
+	unsigned int i, j, k;
+	char *d;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
+		i = 0;
+	else
 	{
-		s1 = "";
-		s2 = "";
+		for (i = 0; s1[i]; i++)
+			;
 	}
-	len1 = str_len(s1);
-	len2 = str_len(s2);
-	join = malloc((len1 + len2) * sizeof(char));
-	if (join == NULL)
+	if (s2 == NULL)
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j]; j++)
+			;
+	}
+	k = i + j + 1;
+	d = malloc(k * sizeof(char));
+	if (d == NULL)
 		return (NULL);
-	for (i = 0; i < len1; i++)
-	{
-		join[i] = s1[i];
-	}
-	for (i = 0; i < len2; i++)
-	{
-		join[len1 + 1] = s2[i];
-	}
-	return (join);
-}
 
-/**
- *	str_len - Count the length of characters
- *	@s: integer input
- *	Return: length
- */
-int str_len(int *s)
-{
-	int i;
-	for  (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	while (i < k)
 	{
-	
+		if (i < (i + j))
+			d[i] = s1[i];
+		else
+			d[i] = s2[i - j];
+		i++;
 	}
-	return (i);
+
+	d[i] = '\0';
+	return (d);
 }
