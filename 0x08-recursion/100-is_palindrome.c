@@ -1,10 +1,10 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strlen - return length of string
- * @str: string to check
+ * _strlen - length of string
+ * @str: char
  *
- * Return: length of str
+ * Return: int
  */
 int _strlen(char *str)
 {
@@ -15,12 +15,12 @@ int _strlen(char *str)
 }
 
 /**
- * check_palindrome - checks to see if a string is a palindrome
- * @l: left hand index
- * @r: right hand index
- * @p: possible palindrome
+ * check_palindrome - palindrome checker
+ * @l: int
+ * @r: int
+ * @p: char
  *
- * Return: 1 if palindrome 0 if not
+ * Return: 1 or 0
  */
 int check_palindrome(int l, int r, char *p)
 {
@@ -33,10 +33,10 @@ int check_palindrome(int l, int r, char *p)
 }
 
 /**
- * is_palindrome - states if a string is a palindrome
- * @s: string to check
+ * is_palindrome - palindrome is string or not
+ * @s: char
  *
- * Return: 1 if palindrome, 0 if not
+ * Return: 1 or 0
  */
 int is_palindrome(char *s)
 {
