@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * wrdcnt - counts the number of words in a string
- * @s: string to count
+ * wrdcnt - Word count
+ * @s: char
  *
- * Return: int of number of words
+ * Return: int
  */
 int wrdcnt(char *s)
 {
@@ -26,10 +26,10 @@ int wrdcnt(char *s)
 }
 
 /**
- * strtow - splits a string into words
- * @str: string to split
+ * strtow - splits string
+ * @str: char
  *
- * Return: pointer to an array of strings
+ * Return: char
  */
 char **strtow(char *str)
 {
