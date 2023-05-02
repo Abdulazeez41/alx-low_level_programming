@@ -2,16 +2,15 @@
 #include <stdlib.h>
 
 /**
- * delete_nodeint_at_index - deletes the node at index index
- * of a listint_t linked list.
- * @head: double pointer to the first node in the list
- * @index: index of the node to delete
+ * delete_nodeint_at_index - deletes the node at index
+ * @head: listint_t
+ * @index: unsigned int
  *
- * Return: pointer to the indexed node
+ * Return: int
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	listint_t *current, *next;
 
 	if (head == NULL || *head == NULL)
@@ -24,11 +23,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 	current = *head;
-	for (i = 0; i < index - 1; i++)
+	while (i < index - 1)
 	{
 		if (current->next == NULL)
 			return (-1);
 		current = current->next;
+		i++;
 	}
 	next = current->next;
 	current->next = next->next;
