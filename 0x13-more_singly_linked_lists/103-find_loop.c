@@ -2,31 +2,31 @@
 
 /**
  * find_listint_loop - finds the loop in a linked list.
- * @head: pointer to the beginning of the list
+ * @head: listint_t
  *
- * Return: address of the node where the loop starts or NULL if there's no loop
+ * Return: listint_t
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tortoise, *hare;
+	listint_t *frog, *snail;
 
-	tortoise = hare = head;
-	while (tortoise && hare && hare->next)
+	frog = snail = head;
+	while (frog && snail && snail->next)
 	{
-		tortoise = tortoise->next;
-		hare = hare->next->next;
-		if (tortoise == hare)
+		frog = frog->next;
+		snail = snail->next->next;
+		if (frog == snail)
 		{
-			tortoise = head;
+			frog = head;
 			break;
 		}
 	}
-	if (!tortoise || !hare || !hare->next)
+	if (!frog || !snail || !snail->next)
 		return (NULL);
-	while (tortoise != hare)
+	while (frog != snail)
 	{
-		tortoise = tortoise->next;
-		hare = hare->next;
+		frog = frog->next;
+		snail = snail->next;
 	}
-	return (hare);
+	return (snail);
 }
