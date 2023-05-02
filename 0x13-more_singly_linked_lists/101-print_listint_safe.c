@@ -3,15 +3,14 @@
 #include <stdio.h>
 
 /**
- * _r - reallocates memory for an array of pointers
- * to the nodes in a linked list
- * @list: the old list to append
- * @size: size of the new list (always one more than the old list)
- * @new: new node to add to the list
+ * _l - allocate memory to listint_t
+ * @list: listint_t
+ * @size: size_t
+ * @new: listint_t
  *
- * Return: pointer to the new list
+ * Return: listint_t
  */
-const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_l(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **newlist;
 	size_t i;
@@ -30,10 +29,10 @@ const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 }
 
 /**
- * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the start of the list
+ * print_listint_safe - prints listint_t
+ * @head: listint_t
  *
- * Return: the number of nodes in the list
+ * Return: size_t
  */
 size_t print_listint_safe(const listint_t *head)
 {
@@ -52,7 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		num++;
-		list = _r(list, num, head);
+		list = _l(list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
