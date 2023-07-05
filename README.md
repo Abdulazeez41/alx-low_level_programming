@@ -1,3 +1,3 @@
 ```text
-	Alx-low_level_programming
+	ALX-Low_Level_Language
 ```
