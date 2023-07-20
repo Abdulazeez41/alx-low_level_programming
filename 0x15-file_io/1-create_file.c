@@ -23,7 +23,7 @@ int create_file(const char *filename, char *content)
 	if (new_fd == -1)
 		return (-1);
 	if (content != NULL)
-		new_len = write(new_fd, content, _str_len(content));
+		new_len = write(new_fd, content, _countStr(content));
 	close(new_fd);
 	if (new_len == -1)
 		return (-1);
