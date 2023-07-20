@@ -14,7 +14,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-    int new_fd;
+	int new_fd;
 	ssize_t new_len = 0;
 
 	if (filename == NULL)
@@ -38,7 +38,7 @@ int create_file(const char *filename, char *text_content)
  */
 size_t _countStr(char *str)
 {
-    size_t i;
+	size_t i;
 
 	for (i = 0; str[i]; i++)
 		;
