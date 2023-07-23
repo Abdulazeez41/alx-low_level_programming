@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary - prints a n in binary
+ * print_binary - prints n in binary
  * @n: no to print
  *
  * Return: void
