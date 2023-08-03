@@ -37,8 +37,9 @@ void print_binary(unsigned long int n)
 unsigned long int _pow(unsigned int base, unsigned int pow)
 {
 	unsigned long int n = 1;
+	unsigned int i;
 
-	for (unsigned int i = 1; i <= pow; i++)
+	for (i = 1; i <= pow; i++)
 		n *= base;
 
 	return (n);
