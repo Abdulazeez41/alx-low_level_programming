@@ -39,9 +39,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	bytesRead = read(file, buffer, letters);
+	close(file);
 	if (file == -1)
 	{
-		close(file);
 		free(buffer);
 		return (0);
 	}
