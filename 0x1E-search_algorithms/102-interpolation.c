@@ -14,36 +14,36 @@
  */
 int interpolation_search(int *array, size_t size, int value)
 {
-    size_t i, l, r;
+	size_t i, l, r;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    for (l = 0, r = size - 1; r >= l;)
-    {
-        /* Calculate the probe index using interpolation formula */
-        i = l + (((double)(r - l) / (array[r] - array[l])) * (value - array[l]));
+	for (l = 0, r = size - 1; r >= l;)
+	{
+		/* Calculate the probe index using interpolation formula */
+		i = l + (((double)(r - l) / (array[r] - array[l])) * (value - array[l]));
 
-        /* Check if the probe index is within the array bounds */
-        if (i < size)
-            printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-        else
-        {
-            printf("Value checked array[%ld] is out of range\n", i);
-            break;
-        }
+		/* Check if the probe index is within the array bounds */
+		if (i < size)
+			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		else
+		{
+			printf("Value checked array[%ld] is out of range\n", i);
+			break;
+		}
 
-        /* Check if the value is found at the probe index */
-        if (array[i] == value)
-            return (i);
+		/* Check if the value is found at the probe index */
+		if (array[i] == value)
+			return (i);
 
-        /* Update the search range based on the comparison result */
-        if (array[i] > value)
-            r = i - 1;
-        else
-            l = i + 1;
-    }
+		/* Update the search range based on the comparison result */
+		if (array[i] > value)
+			r = i - 1;
+		else
+			l = i + 1;
+	}
 
-    /* Value not found in the array */
-    return (-1);
+	/* Value not found in the array */
+	return (-1);
 }
